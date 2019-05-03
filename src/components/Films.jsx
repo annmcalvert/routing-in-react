@@ -12,11 +12,12 @@ class Films extends Component {
     componentDidMount() {
         fetch("https://ghibliapi.herokuapp.com/films")
             .then(res => res.json())
-            // .then((obj) => console.log(obj))
             .then(
                 (films) => {
                     this.setState({ films: films });
-                })
+                });
+                console.log(this.props.match.params.id)
+
     }
 
     render() {
