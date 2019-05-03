@@ -16,7 +16,7 @@ class Films extends Component {
                 (films) => {
                     this.setState({ films: films });
                 });
-                console.log(this.props.match.params.id)
+                // console.log(this.props.match.params.id)
 
     }
 

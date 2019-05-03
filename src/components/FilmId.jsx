@@ -17,11 +17,10 @@ class FilmId extends Component {
                 (film) => {
                     this.setState({ film: film });
                 });
-        
-
-    }
+           }
 
     render () {
+        console.log(this.state.film);
         return (
             <h1>working</h1>
         )
