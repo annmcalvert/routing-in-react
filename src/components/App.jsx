@@ -13,7 +13,7 @@ class App extends Component {
             <br></br>
             <Router>
                 <Fragment>
-                    <Link className="btn btn-primary m-3" to="/">Go App</Link>
+                    <Link className="btn btn-primary m-3" to="/">Go Home</Link>
                     <Link className="btn btn-primary m-3" to="/films">View Films</Link>
                     <Link className="btn btn-primary m-3" to="/people">View People</Link>
 
