@@ -9,15 +9,14 @@ class Films extends Component {
         };
     }
 
-    componentDidMount() {
-        fetch("https://ghibliapi.herokuapp.com/films")
-            .then(res => res.json())
-            .then(
-                (films) => {
-                    this.setState({ films: films });
-                });
-                // console.log(this.props.match.params.id)
-
+    async componentDidMount() {
+        try {
+            const res = await fetch("https://ghibliapi.herokuapp.com/films");
+            const films = await res.json();
+            this.setState({ films });
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     render() {

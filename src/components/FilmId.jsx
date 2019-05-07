@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 
 
 class FilmId extends Component {
@@ -9,46 +9,59 @@ class FilmId extends Component {
         };
     }
 
-    componentDidMount() {
-        // console.log(this.props.match)
-        fetch("https://ghibliapi.herokuapp.com/films")
-            .then(res => res.json())
-            .then(
-                (film) => {
-                    this.setState({ film: film });
-                });
-           }
+    async componentDidMount() {
+        try {
+            const res = await fetch("https://ghibliapi.herokuapp.com/films/" + this.props.match.params.id);
+            const film = await res.json();
+            this.setState({ film });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
-    render () {
+    // componentDidMount() {
+    //     // console.log(this.props.match)
+    //     fetch("https://ghibliapi.herokuapp.com/films/" + this.props.match.params.id)
+    //         .then(res => res.json())
+    //         .then(
+    //             (film) => {
+    //                 this.setState({ film });
+    //             });
+    // }
+
+    render() {
         console.log(this.state.film);
         return (
-            <h1>working</h1>
+            <div>
+                <h1>ID: {this.state.film.id} </h1>
+                <h1>working</h1>
+            </div>
         )
     }
 
-// render () {
-//     return (
-//         <div className="card bg-light mb-3">
-//             <div className="card-header">{this.state.movie.title}</div>
-//             <div className="card-body">
-//                 <p className="card-text">{this.state.movie.description}</p>
-//             </div>
-//         </div>
+    // render () {
+    //     return (
+    //         <div className="card bg-light mb-3">
+    //             <div className="card-header">{this.state.movie.title}</div>
+    //             <div className="card-body">
+    //                 <p className="card-text">{this.state.movie.description}</p>
+    //             </div>
+    //         </div>
 
-//     )
-// }
+    //     )
+    // }
 
 
-// const FilmId = ({ film: { title, description } }) => {
-//     return (
-//         <div className="card bg-light mb-3">
-//             <div className="card-header">{title}</div>
-//             <div className="card-body">
-//                 <p className="card-text">{description}</p>
-//             </div>
-//         </div>
+    // const FilmId = ({ film: { title, description } }) => {
+    //     return (
+    //         <div className="card bg-light mb-3">
+    //             <div className="card-header">{title}</div>
+    //             <div className="card-body">
+    //                 <p className="card-text">{description}</p>
+    //             </div>
+    //         </div>
 
-//     )
+    //     )
 }
 
 export default FilmId;

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import logo from './logo.png';
 import Films from './Films';
 import FilmId from './FilmId';
 // import Error from './Error';
@@ -7,6 +8,9 @@ import FilmId from './FilmId';
 class App extends Component {
     render() {
         return (
+            <div className="container">
+            <img src={logo} alt="logo"></img>
+            <br></br>
             <Router>
                 <Fragment>
                     <Link className="btn btn-primary m-3" to="/">Go App</Link>
@@ -21,6 +25,7 @@ class App extends Component {
                     </Switch>
                 </Fragment>
             </Router>
+            </div>
         );
     }
 }
