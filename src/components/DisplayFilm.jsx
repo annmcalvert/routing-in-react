@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const DisplayFilm = ({ film: { title, description, id } }) => {
     return (
