@@ -5,7 +5,7 @@ import Films from './Films';
 import FilmId from './FilmId';
 import People from './People';
 import PersonId from './PersonId';
-import Error from './Error';
+// import Error from './Error';
 
 class App extends Component {
     render() {
@@ -25,7 +25,7 @@ class App extends Component {
                             <Route exact path="/films/:id" component={FilmId} />
                             <Route exact path="/people" component={People} />
                             <Route exact path="/people/:id" component={PersonId} />
-                            <Route component={Error} />
+                            {/* <Route component={Error} /> */}
                         </Switch>
                     </Fragment>
                 </Router>
