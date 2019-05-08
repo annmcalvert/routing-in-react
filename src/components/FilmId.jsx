@@ -19,7 +19,6 @@ class FilmId extends Component {
     }
 
     render() {
-        // console.log(this.state.film);
         const {
             film: {
                 description,
@@ -35,7 +34,6 @@ class FilmId extends Component {
                 title,
                 // url,
                 // vehicles,
-
             }
         } = this.state;
 

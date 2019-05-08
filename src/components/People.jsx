@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import DisplayPerson from './DisplayPerson';
 
-
-// class Films extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             films: []
-//         };
-//     }
-
 class People extends Component {
     constructor(props) {
         super(props);
@@ -17,16 +8,6 @@ class People extends Component {
             people: []
         };
     }
-
-    // async componentDidMount() {
-    //     try {
-    //         const res = await fetch("https://ghibliapi.herokuapp.com/films");
-    //         const films = await res.json();
-    //         this.setState({ films });
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
 
     async componentDidMount() {
         try {

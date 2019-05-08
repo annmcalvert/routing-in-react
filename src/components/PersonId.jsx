@@ -19,7 +19,6 @@ class PersonId extends Component {
     }
 
     render() {
-        // console.log(this.state.film);
         const {
             person: {
                 name,
@@ -31,7 +30,6 @@ class PersonId extends Component {
                 hair_color,
                 species,
                 url
-
             }
         } = this.state;
 
@@ -43,8 +41,6 @@ class PersonId extends Component {
                     <p>Gender: {gender}</p>
                     <p>Eye Color: {eye_color}</p>
                     <p>Hair Color: {hair_color}</p>
-                    
-                    
                     <p>ID: {id}</p>
                 </div>
             </div>

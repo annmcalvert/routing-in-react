@@ -19,7 +19,6 @@ class Films extends Component {
         }
     }
 
-
     render() {
         return (
             <div className="container">
@@ -28,7 +27,5 @@ class Films extends Component {
         );
     }
 }
-
-
 
 export default Films;
