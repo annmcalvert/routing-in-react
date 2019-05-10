@@ -26,10 +26,7 @@ class PersonId extends Component {
                 gender,
                 id,
                 eye_color,
-                films,
                 hair_color,
-                species,
-                url
             }
         } = this.state;
 

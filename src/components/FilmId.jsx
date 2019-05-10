@@ -24,16 +24,10 @@ class FilmId extends Component {
                 description,
                 director,
                 id,
-                // length,
-                // locations,
-                // people,
                 producer,
                 release_date,
                 rt_score,
-                // species,
                 title,
-                // url,
-                // vehicles,
             }
         } = this.state;
 
@@ -46,11 +40,6 @@ class FilmId extends Component {
                     <p>Producer: {producer}</p>
                     <p>Release Date: {release_date}</p>
                     <p>RT Score: {rt_score}</p>
-                    {/* <p>Locations: {locations}</p>
-                    <p>People: {people}</p>
-                    <p>Species: {species}</p>
-                    <p>Url: {url}</p>
-                    <p>Vehicles: {vehicles}</p> */}
                     <p>ID: {id}</p>
                 </div>
             </div>
