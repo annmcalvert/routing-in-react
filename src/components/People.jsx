@@ -21,9 +21,9 @@ class People extends Component {
 
     render() {
         return (
-            <div className="container">
+            <>
                 {this.state.people.map(person => <DisplayPerson key={person.id} person={person} />)}
-            </div>
+            </>
         );
     }
 }

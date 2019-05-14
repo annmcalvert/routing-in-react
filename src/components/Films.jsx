@@ -21,9 +21,9 @@ class Films extends Component {
 
     render() {
         return (
-            <div className="container">
+            <>
                 {this.state.films.map(film => <DisplayFilm key={film.id} film={film} />)}
-            </div>
+            </>
         );
     }
 }
